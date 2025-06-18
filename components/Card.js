@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
 export default function Card() {
     const [review, setReview] = useState([])
 
-    const apiUrlReview = process.env.NEXT_PUBLIC_REVIEWS;
+    // const apiUrlReview = process.env.NEXT_PUBLIC_REVIEWS;
+    const apiUrlReview = "http://o-complex.com:1337/reviews";
 
     useEffect(() => {
         fetch(apiUrlReview).then(res => res.json()).then(res => {

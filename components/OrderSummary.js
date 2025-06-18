@@ -10,8 +10,10 @@ export default function OrderSummary({ selectedItems }) {
 
                 <div className="mb-6 space-y-2">
                     {Object.entries(selectedItems).map(([id, item]) => (
-                        <div key={id} clasgit initsName="flex justify-between items-center text-gray-700">
-                            <span>{item.title}</span>
+                        <div key={id} className="flex justify-between items-center text-gray-700">
+                            <div>
+                                <span>{item.title}</span>
+                            </div>
                             <div className="flex items-center space-x-4">
                                 <span>x{item.quantity}</span>
                                 <span>{item.price * item.quantity}₽</span>

@@ -6,7 +6,8 @@ export default function Products({ selectedItems, setSelectedItems }) {
     const [openMap, setOpenMap] = useState({})
     const [count, setCount] = useState({})
 
-    const apiUrlProducts = process.env.NEXT_PUBLIC_PRODUCTS
+    // const apiUrlProducts = process.env.NEXT_PUBLIC_PRODUCTS
+    const apiUrlProducts = "http://o-complex.com:1337/products?page=1&page_size=20"
 
     useEffect(() => {
         fetch(apiUrlProducts).then(res => res.json()).then(res => {
